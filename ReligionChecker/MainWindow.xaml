@@ -1,0 +1,31 @@
+﻿<Window x:Class="ReligionChecker.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ReligionChecker"
+        mc:Ignorable="d"
+        Title="Religion Checker" 
+        Height="684.213" 
+        Width="389.067" 
+        WindowStyle="ToolWindow"
+        ResizeMode="NoResize">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#FF59717A" Offset="0"/>
+                <GradientStop Color="#FF71B2CA" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <TextBox x:Name="pathTB" Text="{Binding Path=PathToStates}" HorizontalAlignment="Left" Height="18.6" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="10"/>
+        <Button x:Name="pathSelectBtn" Content="..." HorizontalAlignment="Left" Margin="330,10,0,0" VerticalAlignment="Top" Width="34" Height="18.6" Click="pathSelectBtn_Click"/>
+        <DataGrid x:Name="table" CanUserResizeColumns="False" CanUserResizeRows="False" CanUserAddRows="False" CanUserDeleteRows="False"  HorizontalAlignment="Left" Height="556.667" Margin="10,33.6,0,0" VerticalAlignment="Top" Width="353.6" AutoGeneratingColumn="table_AutoGeneratingColumn"/>
+        <TextBlock x:Name="versionLabel" HorizontalAlignment="Left" Margin="137,622.04,0,0" TextWrapping="Wrap" Text="Version: " VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Left" Margin="237.426,622.04,0,0" TextWrapping="Wrap" Text="Developed by SuxrobGM" VerticalAlignment="Top" FontStyle="Italic"/>
+        <Button x:Name="loadBtn" Content="Load" HorizontalAlignment="Left" Height="25.76" Margin="10,617.2,0,0" Style="{DynamicResource ButtonStyle}" VerticalAlignment="Top" Width="60" Click="loadBtn_Click"/>
+        <Button x:Name="saveBtn" Content="Save" HorizontalAlignment="Left" Height="25.76" Margin="72,617.2,0,0" Style="{DynamicResource ButtonStyle}" VerticalAlignment="Top" Width="60" Click="saveBtn_Click"/>
+        <ProgressBar x:Name="progressBar" HorizontalAlignment="Left" Height="16.933" Margin="10,595.267,0,0" VerticalAlignment="Top" Width="353.6"/>
+        <TextBlock x:Name="statusText" TextAlignment="Center" HorizontalAlignment="Left" Height="16.933" Margin="84.422,595.267,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="185.327"/>
+
+    </Grid>
+</Window>
